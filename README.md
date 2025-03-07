@@ -1,0 +1,6 @@
+Berikut adalah proyek "1 Day 1 Code" selama 1 bulan yang mencakup konsep Python dari dasar hingga OOP, dengan kode yang bisa dijalankan dan bermanfaat untuk AI, ML, serta Django ke depannya. Saya buat dalam bentuk skrip yang bisa kamu jalankan langsung.
+
+Saya akan mulai dengan menyiapkan struktur proyek. Berikut daftar topik untuk 30 hari:
+ 1. Variabel & Tipe Data
+ 2. Operator
+ 3. Struktur Kontrol (If-Else, Looping) 
