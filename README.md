@@ -4,8 +4,13 @@ Saya akan mulai dengan menyiapkan struktur proyek. Berikut daftar topik untuk 30
  1. Variabel & Tipe Data
  2. Operator
  3. Struktur Kontrol (If-Else, Looping) 
- 4. fungsi dan lambda
- 5. list & tuple
+ 4. Fungsi dan lambda
+ 5. List & tuple
  6. Dictionary & set
  7. String Manipulation
- 8. 
+ 8. List comprehension
+ 9. Exception Handling
+ 10. File Handling
+ 11. Modules & Packages
+ 12. Virtual Environment
+ 13. Unit Testing
