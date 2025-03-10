@@ -44,3 +44,42 @@ print("Selisih(defference):", set_a - set_b)
 # 1. Buat dictionary berisi data diri kamu dan tambahkan informasi baru.
 # 2. Buat dua set berisi angka dan lakukan operasi union, intersection, dan difference.
 # 3. Gunakan dictionary untuk menyimpan daftar nilai mata kuliah dan hitung rata-ratanya.
+
+# Latihan 1
+print("latihan1")
+biodata ={
+    "Nama": "Didit",
+    "umur": 24,
+    "pendidikan": "S1 Teknik Elektro",
+    "status": "Lajang"
+}
+
+biodata["universitas"] = "Universitas Muhammadiyah Bandung"
+del biodata["status"]
+
+print("Biodata: ", biodata)
+
+# Latihan 2
+print("Latihan 2")
+
+no1 = {5, 6, 7, 8, 9, 10}
+no2 = {8, 9, 10, 11, 12}
+
+print("Irisan:", no1 & no2)
+print("GAbungan:", no1 | no2)
+print("selisih", no2 - no1)
+
+# Latihan 3
+print("latihan 3")
+
+nilai = {
+    "fisika" : 80,
+    "OOP" : 76,
+    "matek" : 60,
+    "kimia" : 77,
+    "bahasa inggris": 66
+}
+
+rata_rata = sum(nilai.values())/ len(nilai)
+print("NIlai matakuliah :", nilai)
+print("rata-rata nilai mata kuliah:", rata_rata)
