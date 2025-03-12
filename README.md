@@ -14,3 +14,10 @@ Saya akan mulai dengan menyiapkan struktur proyek. Berikut daftar topik untuk 30
  11. Modules & Packages
  12. Virtual Environment
  13. Unit Testing
+ 14. Regular Expression(Regex)
+ 15. Debugging & Logging
+ 16. Pandas dasar
+ 17. numpy dasar
+ 18. matploblib & seaborn
+ 19. basic SQL with SQLite
+ 20. web scraping dengan BeautifulSoup
