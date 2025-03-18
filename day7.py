@@ -1,72 +1,56 @@
-# Day 7 Control Flow (percabangan & perulangan) dalam python
+# Day 7 : String Manupilation dalam python
 
-# percabangan (if, elif, else)
-umur = 20
-if umur < 20:
-    print("kamu masih anak-anak")
-elif 18<= umur < 25:
-    print("kamu dewasa muda")
-else:
-    print("kamu sudah dewasa")
+# mendefinisikan string
+text = "Belajar Python itu Menyenangkan!"
 
-#perulangan For
-buah = ["apel", "jeruk", "mangga", "anggur"]
-for b in buah :
-    print("buah", b)
+# mengakses karakter dalam string
+print("Karakter pertama:", text[0])
+print("Karakter Kedua:", text[1])
 
-# perulangan dengan range
-for i in range( 1, 6):
-    print("nomorL", i)
+# mengiris string (Slicing)
+print("kata pertama:", text[:7])
+print("Kata kedua:", text[8:14])
 
-# perulangan  while
-angka = 1
-while angka < 5:
-    print("angka", angka)
-    angka +=1
+# Mengubah case
+print("Uppercase:", text.upper())
+print("lowercase:", text.lower())
+print("Title Case:", text.title())
 
-# break dan continue dalam loop
-for i in range( 1, 10):
-    if i == 5:
-        break # keluar dari loop jika i = 5
-    print("iterasi:", i)
+# menghapus spasi dan karakter khusus
+text2= "  Python Programming    "
+print("Tenpa spasi awal dan akhir:", text2.strip())
 
-for i in range(1, 10):
-    if i % 2 == 0:
-        continue # lewati iterasi jika i genap
-    print("Angka ganjil", i)
+# Menganti kata dalam string
+print("ganti 'python' dengan 'Data Science':", text.replace("Python", "Data Science"))
 
-# Nested loop
-for i in range(1, 4):
-    for j in range(1, 4):
-        print(f"i={i}, j={j}")
+# Memeriksa keberadaan kata dalam string
+print("Apakah 'python' ada dalam teks?", "python" in text)
 
+# Memisahkan dan mengabungkan string
+kalimat = "Saya, suka, belajar, python"
+list_kata = kalimat.split(",")
+print("list kata:", list_kata)
+print("GAbungkan kembali:", " ".join(list_kata))
+
+# format string
+nama = "Alice"
+umur = 25
+print(f"Nama saya {nama}, saya berusia {umur} tahun.")
 
 # Latihan
-# 1. Buat program yang meminta input usia pengguna, lalu cetak kategori usia (anak, remaja, dewasa).
-# 2. Buat perulangan for yang mencetak angka kelipatan 3 dari 1-30.
-# 3. Gunakan while loop untuk menghitung jumlah angka dari 1-10.
-
-# latihan 1
+# 1. Buat program yang menerima input nama dan mengubahnya menjadi uppercase.
 print("latihan 1")
+nama = input("input nama anda:")
+print("Nama upper case :", nama.upper())
 
-usia = int(input("masukan usia anda: "))
-if usia < 18:
-    print("kamu masih anak-anak")
-elif 18 <= usia < 25:
-    print("Kamu sudah remaja")
-else:
-    print("kamu sudah dewasa")
-
-# latihan 2
+# 2. Cek apakah kata "Data" ada dalam input kalimat pengguna.
 print("latihan 2")
-for i in range(3, 31, 3):
-    print("kelipatan 3: ", i)
+kalimat2 = "aku adalah seorang data science"
+print("apakah 'data' ada dalam kalimat?", "data" in kalimat2)
 
-# latihan 3
+# 3. Ambil hanya huruf vokal dari sebuah string menggunakan looping.
 print("latihan 3")
-jumlah =0
-angka = 1
-while angka <= 10:
-    jumlah += angka
-    angka += 1
-print("jumlah angka dari 1-10:", jumlah)
+teks_vokal = input("Masukan sebuah kalimat:")
+vokal = "aiueoAIUEO"
+filter_vokal = "".join([huruf for huruf in teks_vokal if huruf in vokal])
+print("Huruf vokal dalam teks:", filter_vokal)
