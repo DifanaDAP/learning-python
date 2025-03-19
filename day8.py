@@ -1,81 +1,40 @@
-# Day 8 Fungsi dalam python
+# day 8 List comprehension dalam python
 
-# Definisi fungsi
-def sapa(nama):
-    """Fungsi untuk menyapa orang"""
-    print(f"hallo, {nama}! Selamat datang.")
+# list comprehension dasar
+angka = [1, 2, 3, 4, 5]
+kubik = [x**3 for x in angka]
+print("Kubik dari angka:", kubik)
 
-# memanggil fungsi
-sapa("didit")
-sapa("fauzan")
+# List Comprehension dengan kondisi
+angka_genap = [x for x in range(20) if x % 2 == 0]
+print("Angka genap dari 0 - 19", angka_genap)
 
-# fungsi dengan return value
-def kuadrat(angka):
-    return angka ** 2
+# list comprehension dendan nested loop
+pasangan = [ ( x, y) for x in range (3) for y in range(3)]
+print("Pasangan angka: ", pasangan)
 
-hasil = kuadrat(5)
-print("Hasil Kuadrat : ", hasil)
+# menggunakan list comprehension untuk manipulasi string
+kata ="pemograman"
+vokal = [huruf for huruf in kata if huruf in "aiuoeAIUEO"]
+print("Huruf vokal dalam kata:", vokal)
 
-# Fungsi dengan multiple parameter
-def luas_persegi_panjang(panjang, lebar):
-    return panjang * lebar
-
-luas = luas_persegi_panjang( 10, 5)
-print("luas persegi panjang:", luas)
-
-# Fungsi dengan nilai default
-def salam(nama, pesan ="apa kabar?"):
-    print(f"hallo {nama}, {pesan}")
-
-salam("Didit")
-salam("fauzan", "semoga hari mu menyenangkan")
-
-# Fungsi dengan argument tak terbatas(*args)
-def jumlahkan(*angka):
-    return sum(angka)
-print("Total jumlah:", jumlahkan(1, 2, 3, 4, 5))
-
-# fungsi rekursif
-def faktorial(n):
-    if n == 1:
-        return 1
-    return n * faktorial(n - 1)
-
-print("faktorial dari 5:", faktorial(5))
+# list konprehension dengan fungsi
+angka_kuadrat = [pow(x,2) for x in range(10)]
+print("Angka kuadrat dari 0-9:", angka_kuadrat)
 
 # Latihan
-# 1. Buat fungsi yang menerima nama dan usia, lalu mencetak pesan sapaan.
-# 2. Buat fungsi yang menghitung luas lingkaran dengan jari-jari sebagai parameter.
-# 3. Buat fungsi rekursif untuk menghitung bilangan Fibonacci ke-n.
-
-# Latihan 1
+# 1. Buat list comprehension untuk menghasilkan daftar angka ganjil dari 1-20.
 print("latihan 1")
+angka_ganjil = [ x for x in range(21)if x % 2 == 1]
+print("Angka ganjil dari 1 - 21", angka_ganjil)
 
-def sapaan(nama, usia):
-    print((f"hallo, nama : {nama}, usia : {usia}"))
-
-sapaan("didit", 24)
-
-# Latihan 2
+# 2. Buat list comprehension untuk mengubah semua huruf dalam sebuah string menjadi huruf kapital.
 print("latihan 2")
+teks = input("masukan sebuah teks: ")
+teks_kapital = [huruf.upper() for huruf in teks]
+print("Huruf kapital:", " ".join(teks_kapital))
 
-def Luas_lingkaran(r):
-    return 3.14 * (r **2)
-
-luas = Luas_lingkaran(7)
-print("luas lingkaran", luas)
-
-# Latihan 3
-print("latihan 3")
-
-def fibonacci(n):
-    if n <= 0:
-        return "input harus bilangan positif"
-    elif n == 1:
-        return 0
-    elif n == 2:
-        return 1
-    else:
-        return fibonacci(n - 1) + fibonacci(n - 2)
-
-print("bilangan fibonacci ke 7:", fibonacci(7))
+# 3. Buat list comprehension untuk membalik urutan kata dalam sebuah kalimat.
+kalimat = input("Masukan sebuah kalimat:")
+kalimat_terbalik = " ".join(kalimat.split()[::-1])
+print("Kalimat terbalik:", kalimat_terbalik)
