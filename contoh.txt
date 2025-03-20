@@ -1,3 +1,0 @@
-Hallo ini adalah contoh file. 
-Belajar file handling di Python!
-menambahkan baris baru ke file. 
